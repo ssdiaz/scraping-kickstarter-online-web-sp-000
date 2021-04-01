@@ -1,4 +1,4 @@
-require 'Nokogiri'
+require 'nokogiri'
 
 # This just opens a file and reads it into a variable
 html = File.read('fixtures/kickstarter.html')
