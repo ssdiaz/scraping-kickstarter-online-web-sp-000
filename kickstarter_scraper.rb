@@ -1,5 +1,5 @@
 require 'nokogiri'
-require 'pry'
+#require 'pry'
 
 # projects: kickstarter.css("li.project.grid_4")
 # title: project.css("h2.bbcard_name strong a").text
@@ -24,14 +24,12 @@ def create_project_hash
       :location => project.css("ul.project-meta span.location-name").text,
       :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
     }
+    #binding.pry
   end
 
   # return the projects hash
   projects
 end
 
-  binding.pry
-
-
-create_project_hash
+#create_project_hash
 # ruby kickstarter_scraper.rb
